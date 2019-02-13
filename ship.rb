@@ -33,12 +33,12 @@ class Ship
   end
 
   def draw
-    # Ignore this
+    # Ignore this (draws a ship)
   end
 
   def draw_missiles
     @missile_coordinates.each do |missile|
-
+      # Ignore this (draws a missle)
     end
   end
 
