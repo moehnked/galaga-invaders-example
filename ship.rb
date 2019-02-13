@@ -22,7 +22,7 @@ class Ship
     @x += 5
   end
 
-  def fire
+  def fire_missile
     @missile_coordinates << [@x, @y - HEIGHT / 2]
   end
 
