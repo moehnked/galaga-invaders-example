@@ -1,14 +1,16 @@
 require_relative 'missile'
+require_relative 'can_shoot'
 
-class Alien
+class Alien < CanShoot
 
   WIDTH = 50
   HEIGHT = 50
 
-  attr_accessor :location
+  attr_accessor :location, :firing_point
 
   def initialize
     @location = Vector.new(200, 200)
+    @firing_point = bottom_edge
   end
 
   def move

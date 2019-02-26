@@ -1,20 +1,17 @@
 require_relative 'vector'
 require_relative 'missile'
 
-class Ship
+class Ship < CanShoot
 
   WIDTH = 100
   HEIGHT = 100
   DEFAULT_VELOCITY = 5
 
-  attr_accessor :location
+  attr_accessor :location, :firing_point
 
   def initialize(screen_width, screen_height)
     @location = Vector.new(screen_width / 2, screen_height - half_height)
-  end
-
-  def muzzle_location
-    Vector.new(location.x, top_edge)
+    @firing_point = top_edge
   end
 
   def move_left
